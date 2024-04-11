@@ -97,25 +97,14 @@ def selection():
                         print("\033[31m Terminating program \033[0m")
                         sys.exit()
 
+                go_to_main_menu() # prompt user to either end the coed or go to main menu
          
          # view event details option #2
             elif int(pick_event) == 2:
+                print("43524245234234345435345345323345")
+            
 
-                                       #header           #title (header)      #title (decript)    #Date: (header)   #Date (decpipt)   #Attendees: (header)   #the rest is list of people going
-                event_two_stuff = ["Event Details:"    ,    "Title:"    ,    "Python Workshop"    ,    "Date:"    ,   "2024-05-15"    ,    "Attendees:"    , "Alice" , "Bob" , "Charlie"]
-                comma2 = ','
-                people2 = comma2.join(event_one_stuff[6:]) #get names of people
-
-
-                print("========================================")
-                print(event_two_stuff[0])                               # "event details"
-                print("")                                               # blank text (spacer)
-                print(event_two_stuff[1] , event_two_stuff[2])          # "title" , "python workshop"
-                print(event_two_stuff[3], event_two_stuff[4])           # "Date:" , "2024-05-15"
-                print(event_two_stuff[5], people2)                      # "Attendees:" and "Alice, Bob, Charlie" 
-                print("========================================")
-
-
+                print("option 2")
             
          # view event details option #3 (user makes the details)
             elif int(pick_event) == 3:
@@ -166,35 +155,6 @@ def selection():
 
 # call selection (with out this nothing would happen)
 selection()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
