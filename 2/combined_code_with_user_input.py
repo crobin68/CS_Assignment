@@ -2,7 +2,7 @@ import time
 import sys
 
 
-# welcoming message
+# welcoming message here
 print("welcome to the event planner") 
 
 
