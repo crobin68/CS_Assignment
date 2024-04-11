@@ -33,54 +33,37 @@ if int(date_year) < 2023:
 ## if the month is not between 1-12 tell user to correct it
 #===============================================================
 
-date_month = input("enter the month number = ")
-while int(date_month) < 1:
+while True:
+    date_month = input("Enter the month number: ")
+    if date_month.isdigit():  # Check if input is a number
+        date_month = int(date_month)
+        if 1 <= date_month <= 12:  # Check for input 1-12
+            break  # end the while true
     print("============================================")
-    print("**** Please enter a month between 1-12 ****")
-    date_month = input("Enter the month number = ")
-    date_month = int(date_month)  # Convert the input to an integer again
-    if date_month > 0:
-        print("**** Please enter a month between 1-12 ****")
-        date_month = input("Enter the month number = ")
-        date_month = int(date_month)  # Convert the input to an integer again
+    print("**** Please enter a month between 1-12 ****") 
 
 
-while int(date_month) > 12:
-    print("============================================")
-    print("**** Please enter a month between 1-12 ****")
-    date_month = input("Enter the month number = ")
-    date_month = int(date_month)
 #===============================================================
-
-
-
-
-
 
 
 # date of event by user input
 #===============================================================
-date_day = input("Please enter the day = ")
-
-if int(date_day) <= 0 >= 31:
-    print("please enter a day from 1 to 31")
+while True:
     date_day = input("Please enter the day = ")
+    if date_day.isdigit():         #check if input is a number
+        date_day = int(date_day)
+        if 1 <= date_day <= 31:  # Check for input 1-31
+            break  # end the while true
+        print("============================================")
+        print("**** Please enter a day between 1-31 ****")
 
 #===============================================================
 
 
-
-
-
-
-
-
 #------------------------------------------List of things to call and to change by user--------------------------------------------------------------------------------------------------------------------
-
 
 #                     #header            #title (header)      #title (decript)    #Date: (header)                 #Date (decpipt)               #Attendees: (header)   #the rest is list of people going
 event_two_stuff = [f"Event Details:"    ,    "Title: "    ,    {name_of_event}    ,    "Date:"    ,   f"{date_year}-{date_month}-{date_day}"   ,    "Attendees:"    , "Alice" , "Bob" , "Charlie"]
-
 #------------------------------------------List of things to call and to change by user--------------------------------------------------------------------------------------------------------------------
 
 
@@ -106,12 +89,6 @@ def show_event():
 
     print("========================================")
 #===========================================================================================================================================================
-
-
-
-
-    
-
 
 
 # Get the user input for the peoples names

@@ -56,8 +56,9 @@ def selection():
                 print("PLease choose an option 1-3")
                 choosing_option_for_upcomming_events()
 
-
+#options for (view events)
 #======================================================================================================================================================================================================================================
+         # view event details option #1
             if int(pick_event) == 1:
 
 
@@ -95,7 +96,9 @@ def selection():
                         time.sleep(1)
                         print("\033[31m Terminating program \033[0m")
                         sys.exit()
-     
+
+         
+         # view event details option #2
             elif int(pick_event) == 2:
 
                                        #header           #title (header)      #title (decript)    #Date: (header)   #Date (decpipt)   #Attendees: (header)   #the rest is list of people going
@@ -112,11 +115,9 @@ def selection():
                 print(event_two_stuff[5], people2)                      # "Attendees:" and "Alice, Bob, Charlie" 
                 print("========================================")
 
-                print("option 2")
+
             
-
-
-
+         # view event details option #3 (user makes the details)
             elif int(pick_event) == 3:
                 print("option 3")
 
