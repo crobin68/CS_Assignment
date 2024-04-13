@@ -12,10 +12,10 @@ current_year = int(input("Please enter the current year = "))
 
 
 #   Making both ints so they can subtract each other
-year = int(current_year) - int(age) 
+year_birth = int(current_year) - int(age) 
 
 #   Doing the math to calculate the year they will be 100
-hundred_age = year + 100
+hundred_age = year_birth + 100
 
 # calculating the years left until thye turn 100
 years_until_100 = hundred_age - current_year
@@ -50,7 +50,7 @@ print(f"Your name is: {name}")
 print(f"Your current age is: {age}")  
 
 #Prints the year the user was born                            #What generation you are                                                     
-print(f"The year you were born was: {year} (You are apart of the {gen_check} Generation)")
+print(f"The year you were born was: {year_birth} (You are apart of the {gen_check} Generation)")
 
 #Prints the year the user will be a age 100
 print(f"You will turn 100 years old on the year {hundred_age} (in {years_until_100} years)")
