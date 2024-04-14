@@ -12,7 +12,7 @@ current_year = int(input("Please enter the current year = "))
 
 
 #   Making both ints so they can subtract each other
-year_birth = int(current_year) - int(age) 
+year_birth = current_year - age 
 
 #   Doing the math to calculate the year they will be 100
 hundred_age = year_birth + 100
@@ -43,8 +43,10 @@ elif 97 <= age <= 100:
 #                     FINAL PRODUCT
 #      print name, age, born_year, how old you will be in 100 years
 print("=====================================================================================") 
-#prints the name the user inputed 
-print(f"Your name is: {name}")
+#prints the name the user inputed with a greating  
+print(f"Hello {name}, Nice to meet you.")
+time.sleep(1)
+
 
 #prints the number(age) the user inputed                                                       
 print(f"Your current age is: {age}")  

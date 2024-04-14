@@ -116,13 +116,6 @@ def selection():
 
 
             else: # if you put option thet is bigger then 1-3 do this
-
-
-
-
-
-
-
                 print("")
                 print("")
                 print("****************************************************")
