@@ -6,16 +6,18 @@ def welcome_message():
     print("Welcome to your event planner")
 
 
+
+
+
+
 # this is to add the event from the users input
 def add_event():
-    # prompts the user to make the format for the date portion
     def user_date():
         while True:
             year = input("Please enter a Year : ")
-            if year.isdigit() and int(year) > 2023 and int(year) < 9999: # to make sure the year is withen 2023 and 9999
+            if year.isdigit() and 2023 < int(year) < 9999:
                 break
             print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
-                # if the number is not valid prompt this message
             print("\033[1;31m Please enter a valid number between 2024 and 9999. \033[0m")
             print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 
@@ -24,7 +26,6 @@ def add_event():
             if month.isdigit() and 1 <= int(month) <= 12:
                 break
             print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
-                # if the number is not valid prompt this message
             print("\033[1;31m Please enter a valid month number between 1 and 12. \033[0m")
             print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 
@@ -33,18 +34,33 @@ def add_event():
             if day.isdigit() and 1 <= int(day) <= 31:
                 break
             print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
-                # if the number is not valid prompt this message
             print("\033[1;31m Please enter a valid day number between 1 and 31. \033[0m")
             print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 
-        date = (f"{year}-{month}-{day}") # set the format of the date 
-        return date
+        return f"{year}-{month}-{day}" # making sure you have all the dates in one format
 
     title = input("Enter an Event Title = ")
-    date = user_date() # grab the date var 
-    attendees = input("Enter event attendees (comma-separated): ").split(',') # when the user puts a "," in-between the people is formats is like a list
+    date = user_date()
+    #=======================================================================================================================================
+    
+    
+    
+    attendees = []  # make an empty list so the people can be imported into it
+
+    done_entered = False # set (done_entered) to a false state
+    while not done_entered:
+        attendee = input("Enter the name of the new attendee (or type 'Done' when finished): ")
+        if attendee.lower() == "done":
+            done_entered = True
+        else:
+            attendees.append(attendee)  # Append attendee to the list
+
+
     events.append({"Title": title, "Date": date, "Attendees": attendees}) # when the user creates an event it uses this empty libery
     print("You have added an event to your list")
+
+
+
 
 
 # if there are no events this message displays 
@@ -98,3 +114,11 @@ def event_planner():
 
 
 event_planner() # execute the whole code on screen
+
+
+
+
+
+
+
+
