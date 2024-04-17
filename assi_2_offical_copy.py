@@ -128,11 +128,11 @@ def ALL_CODE():
             print("\033[1m 2) View upcoming events \033[0m")
             option = input("\033[3m Please choose an option: \033[0m")
 
-            if option == '1': # if user input is ('1') then execute the block (add_event)
+            if option == '1' or option == '01': # if user input is ('1') then execute the block (add_event)
                 add_event()
-            elif option == '2': # if user input is ('1') then execute the block (view_event_details)
+            elif option == '2' or option == '02': # if user input is ('1') then execute the block (view_event_details)
                 view_event_details()
-            elif option == '3': # if the user wants to exit the code they select option #3
+            elif option == '3' or option == '03': # if the user wants to exit the code they select option #3
                 sys.exit()
             else:       # if anything else if typed this will prompt.
                 print("--------------------------------------------------")
