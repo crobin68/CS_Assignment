@@ -43,8 +43,21 @@ def ALL_CODE():
 
             return f"{year}-{month}-{day}" # making sure you have all the dates in one format
 
-        title = input("Enter an Event Title = ")    # get users input for the event title
+
+
+        def title_check():
+            while True:
+                print("*******************************")
+                title = input("Enter an Event Title = ")   # get users input for the event title
+                if title == '':                            # if title blank make user put in a valid title 
+                    print("Please enter a valid title ( Really a blank title?? )")
+                else:   # if the title has something in it break the loop
+                    break
+            return title # to call title outside the block of code
         
+        title = title_check() # call the (title_check) and get (title) out of the block
+        
+
         date = user_date()      # get (date) from (user_date())
         #=======================================================================================================================================
         
@@ -54,7 +67,7 @@ def ALL_CODE():
 
         done_entered = False # set (done_entered) to a false state
         while not done_entered:
-            attendee = input("Enter the name of the new attendee (or type 'Done' when finished): ")
+            attendee = input("Enter the name of the new attendee (Hit ''Enter'' to add more) (or type 'Done' when finished): ")
             if attendee.lower() == "done":  # check to see if input is lowcased (done)
                 done_entered = True         # stop the loop when (done_entered) is True
                 break                       # break the loop 
