@@ -140,8 +140,8 @@ def ALL_CODE():
                 print("--------------------------------------------------")
 
 
-    event_planner() # execute the whole code (lines 1-123) on screen
+    event_planner() # execute the whole code (lines 1-143) on screen
 
 
-ALL_CODE()
+ALL_CODE() #start all the blocks of code and numbers 🏎️💨💨💨 
 
